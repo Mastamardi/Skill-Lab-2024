@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box and Circle Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #4caf50;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation: moveRight 3s infinite alternate;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #2196f3;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            animation: moveLeft 3s infinite alternate;
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 50%;
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                right: 0;
+            }
+            100% {
+                right: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="circle"></div>
+</body>
+</html>
